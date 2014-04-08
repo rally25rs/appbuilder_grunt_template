@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{ "path": "src" },
+		{ "path": "tests" }
+	],
+
+    "build_systems":
+    [
+        {
+            "name": "Grunt",
+            "shell_cmd": "grunt --no-color"
+        }
+    ],
+
+    "settings":
+    {
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true
+    }
+}
