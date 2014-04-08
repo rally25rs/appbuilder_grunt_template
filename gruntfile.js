@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			'app/data/*',
 			'app/styles/*'
 		],
-/*
+
 		jasmine: {
 			src: ['app/scripts/app.js'],
 			options: {
@@ -26,11 +26,11 @@ module.exports = function(grunt) {
 				]
 			}
 		},
-*/
+
 		coffee: {
 			compile: {
 				files: {
-					//'tests/generated/app.spec.js': 'tests/**/*.spec.coffee',
+					'tests/generated/app.spec.js': 'tests/**/*.spec.coffee',
 					'app/scripts/app.js': 'src/scripts/**/*.coffee'
 				}
 			}
@@ -69,5 +69,5 @@ module.exports = function(grunt) {
 		return true;
 	});
 
-	grunt.registerTask('default', ['appbuilder-create', 'clean', 'coffee', 'less', 'copy'/*, 'jasmine'*/]);
+	grunt.registerTask('default', ['appbuilder-create', 'clean', 'coffee', 'less', 'copy', 'jasmine']);
 };
