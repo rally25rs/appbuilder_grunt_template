@@ -1,8 +1,13 @@
 {
 	"folders":
 	[
-		{ "path": "src" },
-		{ "path": "tests" }
+		{
+			"path": "src"
+		},
+		{
+			"path": "tests",
+			"folder_exclude_patterns": ["generated"]
+		}
 	],
 
     "build_systems":

@@ -22,7 +22,15 @@ This is a sample of a way to structure a project to use the Telerik AppBuilder C
 1. In Sublime Text's main menu, choose `Project > Open Project...` and choose this directory.
 1. Edit the code in the `\src` directory.
 1. Run build and tests on command line using the command `grunt`, or `ctrl-b` in Sublime Text (You may have to change your build tool to "Grunt" first).
-1. When running Telerik AppBuilder commands, run them from the `\app` directory, or with the parameter `--path app`
+1. When running Telerik AppBuilder commands, run them from the `\app` directory, or with the parameter `--path app`. For example, to run the simulator:
+
+    appbuilder simulate --path app
+	
+==Grunt tasks==
+
+* `grunt init` - Runs `appbuilder create app` to create the initial `\app` directory structure and .abproject file.
+* `grunt clean` - Removes generated content (.html, .js, .css) from the `\app` directory.
+* `grunt` - (default task) Performs a `clean` then builds CoffeeScript and LESS into the `\app` directory, then runs the Jasmine tests.
 
 =Layout=
 
