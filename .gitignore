@@ -1,4 +1,9 @@
 node_modules
 *.sublime-workspace
-app
 tests/generated
+
+app/*.html
+app/scripts
+app/styles
+app/data
+app/App_Resources

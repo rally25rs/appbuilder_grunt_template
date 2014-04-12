@@ -69,5 +69,6 @@ module.exports = function(grunt) {
 		return true;
 	});
 
+	grunt.registerTask('init', ['appbuilder-create', 'clean']);
 	grunt.registerTask('default', ['appbuilder-create', 'clean', 'coffee', 'less', 'copy', 'jasmine']);
 };
