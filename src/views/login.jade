@@ -1,0 +1,30 @@
+#tabstrip-login(
+    data-role="view"
+    data-title="Login"
+    data-model="app.loginService.viewModel")
+
+    .view-content
+        .logo
+        h3(data-bind="invisible: isLoggedIn") Enter your credentials:
+        h1.welcome(data-bind="visible: isLoggedIn") Welcome,
+            span(data-bind="text: username") !
+        .buttonArea
+            input#logout.login-button(type="submit"
+                         data-role="button"
+                         data-bind="click: onLogout, visible: isLoggedIn"
+                         value="Logout")
+
+        form(data-bind="events: { keyup: checkEnter }")
+            ul(data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn")
+                li
+                    label Username
+                        input(type="text" data-bind="value: username")
+                li
+                    label Password
+                        input(type="password" data-bind="value: password")
+
+            .buttonArea
+                input#login.login-button(type="submit"
+                                         data-role="button"
+                                         data-bind="click: onLogin, invisible: isLoggedIn"
+                                         value="Login")

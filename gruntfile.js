@@ -54,6 +54,20 @@ module.exports = function(grunt) {
 					{ expand: true, cwd: 'src/scripts/', src: ['**/*.!(coffee)'], dest: 'app/scripts/'}
 				]
 			}
+		},
+		
+		jade: {
+			compile: {
+				options: {
+					pretty: true,
+					data: {
+						debug: false
+					}
+				},
+				files: {
+					"app/index.html": ["src/*.jade"]
+				}
+			}
 		}
 	});
 
@@ -69,6 +83,5 @@ module.exports = function(grunt) {
 		return true;
 	});
 
-	grunt.registerTask('init', ['appbuilder-create', 'clean']);
-	grunt.registerTask('default', ['appbuilder-create', 'clean', 'coffee', 'less', 'copy', 'jasmine']);
+	grunt.registerTask('default', ['appbuilder-create', 'clean', 'coffee', 'less', 'jade', 'copy', 'jasmine']);
 };

@@ -37,14 +37,22 @@ This is a sample of a way to structure a project to use the Telerik AppBuilder C
     \app                // The actual AppBuilder CLI project. CoffeeScript and LESS build into here
 	\src                // The source code you edit
 	 |- \App_Resources  // App icons. Copied to \app\App_Resources during build
+	 |
 	 |- \data           // Any misc data. Copied to \app\data during build
+	 |
 	 |- \scripts        // The js and coffescript files that make up your app
-	 |   |- *.coffee
-	 |   |- *.js
+	 |   |- *.coffee    // Coffee files are compiled to .js
+	 |   |- *.js        // js files are directly copied to \app\scripts
+	 |
 	 |- \styles         // The css and less files that make up your app
-	 |   |- *.less
-	 |   |- *.css
-	 |- *.html          // The views that make up your app
+	 |   |- *.less      // Less files are compiled to .css
+	 |   |- *.css       // css files are directly copied to \app\styles
+	 |
+	 |- \views
+	 |   |- *.jade      // The Jade views that make up your app
+	 |
+	 |- *.html          // The views that make up your app when not using Jade
+	 |- index.jade      // optional main Jade file that includes all others
 	\tests              // Jasmine tests
 	 |- \generated      // Coffeescript tests compile to js in this folder before being run
 	 |- *.spec.coffee

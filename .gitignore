@@ -2,6 +2,7 @@ node_modules
 *.sublime-workspace
 tests/generated
 
+app/.ab
 app/*.html
 app/scripts
 app/styles

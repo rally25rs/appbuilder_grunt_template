@@ -1,0 +1,17 @@
+#tabstrip-location(
+    data-role="view"
+    data-title="Location"
+    data-init="app.locationService.initLocation"
+    data-show="app.locationService.show"
+    data-hide="app.locationService.hide"
+    data-model="app.locationService.viewModel"
+    data-stretch="true")
+
+    #no-map(data-bind="invisible: isGoogleMapsInitialized") Location requires internet connection to display the map.
+
+    #map-search-wrap(data-bind="visible: isGoogleMapsInitialized")
+        button#map-navigate-home(data-bind="click: onNavigateHome")
+        form(onsubmit="return false;")
+            input#map-address(type="search" data-bind="value: address" placeholder="Address")
+            input#map-search(type="submit" value="" data-bind="click: onSearchAddress")
+    #map-canvas(data-bind="visible: isGoogleMapsInitialized")

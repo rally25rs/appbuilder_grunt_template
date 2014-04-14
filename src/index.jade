@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title
+        meta(charset="utf-8")
+        link(href="kendo/styles/kendo.mobile.all.min.css", rel="stylesheet")
+        link(href="styles/app.css", rel="stylesheet")
+
+        script(src="cordova.js")
+        script(src="kendo/js/jquery.min.js")
+        script(src="kendo/js/kendo.mobile.min.js")
+        script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true")
+        script(src="scripts/app.js")
+
+    body
+        include views/home
+        include views/login
+        include views/location
+        include views/weather
+
+        include views/layout

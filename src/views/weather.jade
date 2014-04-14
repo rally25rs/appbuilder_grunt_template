@@ -1,0 +1,28 @@
+#tabstrip-weather(
+    data-role="view"
+    data-title="Weather"
+    data-model="app.weatherService.viewModel")
+
+    .weather
+        p.weather-title 20-Day Forecast
+
+        .separator
+            .dark
+            .light
+
+        ul.forecast-list(
+            data-role="listview"
+            data-bind="source: weatherDataSource"
+            data-template="weather-forecast-template")
+
+script#weather-forecast-template(type="text/x-kendo-tmpl")
+    div
+        .position-left
+            span.weather-info.date ${day}
+        .position-right
+            span.weather-info.temperature.high ${highTemperature}
+                sup &deg;
+            span.weather-info.temperature.low ${lowTemperature}
+                sup &deg;
+        .position-center.
+            <span class="weather-icon ${image}"></span>
