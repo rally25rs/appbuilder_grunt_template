@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{ expand: true, cwd: 'src/', src: ['*.html'], dest: 'app/'},
-					{ expand: true, cwd: 'src/App_Resources/', src: ['*'], dest: 'app/App_Resources/'},
+					{ expand: true, cwd: 'src/App_Resources/', src: ['**'], dest: 'app/App_Resources/'},
 					{ expand: true, cwd: 'src/data/', src: ['*'], dest: 'app/data/'},
 					{ expand: true, cwd: 'src/styles/', src: ['**/*.!(less)'], dest: 'app/styles/'},
 					{ expand: true, cwd: 'src/scripts/', src: ['**/*.!(coffee)'], dest: 'app/scripts/'}
