@@ -8,3 +8,7 @@ app/scripts
 app/styles
 app/data
 app/App_Resources
+
+# AppBuilder Simulator seems to leave this file after you close it.
+debug.log
+app/debug.log
